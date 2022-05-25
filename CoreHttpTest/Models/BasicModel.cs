@@ -13,19 +13,19 @@ namespace CoreHttpTest.Models
         [JsonPropertyName("name")]
         public string Name { get; set; }
 
-        //[JsonPropertyName("commit")]
-        //public IEnumerable<GitHubCommits>? Commits { get; set; }
+        [JsonPropertyName("commit")]
+        public GitHubCommits Commits { get; set; }
 
         [JsonPropertyName("protected")]
         public bool Protected { get; set; }
 
-        //public class GitHubCommits
-        //{
-        //    [JsonPropertyName("sha")]
-        //    public string SHA { get; set; }
-        //    [JsonPropertyName("url")]
-        //    public string URL { get; set; }
-        //}
+        public class GitHubCommits
+        {
+            [JsonPropertyName("sha")]
+            public string SHA { get; set; }
+            [JsonPropertyName("url")]
+            public string URL { get; set; }
+        }
 
     }
 
